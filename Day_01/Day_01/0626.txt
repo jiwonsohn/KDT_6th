@@ -1,0 +1,102 @@
+============================0626======================
+
+* 아나콘다
+- 의존성 패치들을 자동으로 설치하여 개발 환경 구축 용이하게 도와줌
+- 가상환경 (프로그램)을 생성하여 버전에 따라 프로그램 활용 가능
+
+# 명령어 사용규칙-----------------------------------------
+예시)	명령어 -옵션
+
+* 명령어 사용법 확인
+	- 명령어 -h
+	- 명령어 --help
+
+* command
+- conda라는 프로그램에 명령을 입력하는 명령어 
+
+예시)
+- conda list : 설치된 파일 리스트를 보여주는 명령어
+
+# 개발환경 구축--------------------------------------------
+- 현재 base 환경:  python 3.11
+
+가상환경
+	- 구현하고자 하는 프로그램에 활용할 패키지 버전에 맞는 python 버전 선정
+
+* step
+
+1) 파이썬 버전 확인
+	python --version / Python 3.11.7
+
+2) conda base 환경 update
+ 	conda update -n base conda (base 환경의 conda를 업데이트하라는 명령어)
+
+3) conda 패키지 업데이트
+	conda update --all
+
+4) 가상환경 리스트 확인
+	conda env list
+
+5) 가상환경 생성
+	conda create -n 가상환경이름 python=파이썬 버전
+
+'''
+## Package Plan ##
+
+  environment location: C:\Users\KDP-43\anaconda3\envs\py_39
+
+  added / updated specs:
+    - python=3.9
+'''
+
+6) 가상환경 실행
+	conda activate {가상환경이름}
+'''
+(py_39) PS C:\WINDOWS\system32>
+'''
+
+7) 가상환경 끄기
+	conda deactivate
+
+8) 가상환경 설치 패키지 확인 주소
+(base)	-> C:\Users\KDP-43\anaconda3\Lib\site-packages
+
+(py_39)	-> C:\Users\KDP-43\anaconda3\envs\py_39\Lib\site-packages
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
