@@ -93,7 +93,6 @@ score = list( map(float, input().strip().split()) )
 # 0-100 input result
 proper = [0<=x<=100 for x in score]
 
-
 if sum(proper) == 4:
 
     if (sum(score)/len(score) >= 80.):
