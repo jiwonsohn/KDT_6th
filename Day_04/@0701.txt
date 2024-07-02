@@ -97,8 +97,8 @@ print(f'key 추출        -> {result}')
 print(f'추출 데이터 타입 -> {type(result)}')
 
 '''
-key 추출        -> dict_keys(['name', 'age', 'job'])
-추출 데이터 타입 -> <class 'dict_keys'> -> not list!!
+key 추출        					-> dict_keys(['name', 'age', 'job'])
+추출 데이터 타입 				-> <class 'dict_keys'> -> not list!!
 '''
 
 	-> 데이터가 많을 때, 키 접근 : for 구문으로 접근!!

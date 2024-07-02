@@ -93,6 +93,11 @@ score = list( map(float, input().strip().split()) )
 # 0-100 input result
 proper = [0<=x<=100 for x in score]
 
+# another ver.
+# proper = 0
+# for i in len(score):
+#     proper +=score[i] in range(0,101)
+
 if sum(proper) == 4:
 
     if (sum(score)/len(score) >= 80.):
