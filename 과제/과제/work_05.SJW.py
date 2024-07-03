@@ -169,15 +169,33 @@ for i in range(5):
 
 # 19.6
 height = int(input().strip())
-width   = height*2 - 1
+# width   = height*2 - 1
 
 for i in range(height):
-    for j in range(width):
-        
-        if j%(height-1) :print("",end="") 
-        else: print("*",end="")
+  for j in reversed(range(height)):
+    if j > i:
+      print(' ', end='')
+    else:
+      print('*', end='')
+    if j < i:
+      print('*', end='')
+  print()
 
+
+
+'''
+origin.ver
+for i in range(height):
+    for j in reversed( range(height)):
+
+        if j<i:
+            print("",end="")
+        else:
+            print("*",end="")
+        if j>i:
+            print("*",end="")
     print()
+'''
 
 
         
