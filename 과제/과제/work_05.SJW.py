@@ -171,13 +171,22 @@ for i in range(5):
 height = int(input().strip())
 width   = height*2 - 1
 
+# Wish ver.
 for i in range(height):
     for j in range(width):
         
-        if j%(height-1) :print("",end="") 
-        else: print("*",end="")
+        # if j%(height-1) :print("",end="") 
+
+        if (width)-1-i<= j <= (width)-1 + i: print("*",end="")
+
+        else: print(" ",end="")
 
     print()
+
+# another ver.
+# 뒷쪽 빈칸은 출력 skip!!!
+for i in range(1,height+1):
+    print(" " * (height-i) + "*" * (width))
 
 
         

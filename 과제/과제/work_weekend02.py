@@ -178,3 +178,170 @@ print(close_table)
 {'09/05': 10500, '09/06': 10300, '09/07': 10100, '09/08': 10800, '09/09': 11000}  
 '''
 
+
+##===========================For=======================
+# 101
+'''
+Bool Type
+'''
+
+# 102
+print(3==5)
+# False
+
+# 103
+print(3 < 5)
+# True
+
+# 104
+x = 4
+print(1 < x < 5)
+# True
+
+# 105
+print ((3 == 3) and (4 != 3))
+# True
+
+
+# 106
+'''
+연산자 '=>'를 '      '<='로 수정해야
+'''
+
+# 107
+if 4 < 3:
+    print("Hello World")
+'''
+출력값 없음
+'''
+
+# 108
+if 4 < 3:
+    print("Hello World.")
+else:
+    print("Hi, there.")
+
+
+'''
+Hi, there.
+'''
+
+# 109
+if True :
+    print ("1")
+    print ("2")
+else :
+    print("3")
+print("4")
+'''
+1
+2
+4
+'''
+
+# 110
+if True :
+    if False:
+        print("1")
+        print("2")
+    else:
+        print("3")
+else :
+    print("4")
+print("5")
+'''
+3
+5
+'''
+
+# 111
+msg = input().strip()
+
+print(msg*2)
+'''
+입력:  안녕하세요
+결과:  안녕하세요안녕하세요
+'''
+
+# 112
+nums = int( input().strip() )
+
+print(f'{nums + 10}')
+'''
+입력:  30
+결과:  40
+'''
+
+# 113
+num = int( input().strip())
+
+if num%2 : print("홀수")
+else:  print("짝수")
+'''
+입력:  30
+결과:  짝수
+'''
+
+# 114
+num = int( input().strip())
+
+print(f'{num+20}') if num+20<=225 else print(225)
+
+'''
+입력:  200
+출력:  220
+
+입력:  240
+출력:  225
+'''
+
+# 115
+
+num = int( input().strip())
+
+if num-20 in range(256): print(f'{num-20}')
+
+elif (num-20) <0: print(0)
+else : print(255)
+'''
+입력:  200
+출력:  180
+
+입력:  15
+출력:  0
+'''
+
+# 116
+
+time = input("현재시간 (예시: 02:00):     ").strip()
+
+if time[-2:] == "00": print("정각입니다.")
+else: print("정각이 아닙니다.")
+
+'''
+현재시간 (예시: 02:00):     02:00
+정각입니다.
+
+재시간 (예시: 02:00):     03:10
+정각이 아닙니다.
+'''
+
+# 117
+fruit = ["사과", "포도", "홍시"]
+
+data = input("좋아하는 과일은?     ").strip()
+
+if data in fruit: print("정답입니다.")
+else: print("확인할 수 없습니다.")
+
+# 118
+warn_investment_list = ["Microsoft", "Google", "Naver", "Kakao", "SAMSUNG", "LG"]
+
+
+
+
+
+
+
+
+
