@@ -340,6 +340,190 @@ warn_investment_list = ["Microsoft", "Google", "Naver", "Kakao", "SAMSUNG", "LG"
 
 
 
+# 123
+환율 = {'달러':1167,'엔':1.096,'유로':1268,'위안':171}
+
+user = input("예시) 100(빈칸)달러:  ")
+
+num, currency = user.split()
+
+print(float(num)*환율[currency], "원")
+
+
+# 124
+
+n1 = int(input("number1:    "))
+n2 = int( input("number2:    "))
+n3 = int( input("number3:    "))
+
+if n1>=n3 and n1>=n2:
+    print(n1)
+
+elif n2>=n3 and n2>=n1:
+    print(n2)
+
+else:
+    print(n3)
+
+# 128
+# 주민번호: 821010-1635210
+
+jumin = input("주민등록번호:    ").split("-")
+
+jumin = jumin[0]+jumin[-1]
+# jumin = jumin.split("")
+# jumin = list(map(int,jumin))
+
+valid = [2,3,4,5,6,7,8,9,2,3,4,5]
+
+tot =0
+for idx in range(len(valid)):
+    tot+=int(jumin[idx])*valid[idx]
+
+if (11 - tot%11) == int(jumin[-1]): print(f' {(11 - tot%11)} {jumin[-1]}')
+else: print(f'{11 - tot%11} {int(jumin[-1])} ')
+
+
+# 150
+tmp = ["가", "나", "다", "라"]
+
+for data in reversed(tmp):
+    print(data)
+
+# another ver.
+for data in tmp[::-1]:
+    print(data)
+
+# 159
+tmp = ['hello.py', 'ex01.py', 'intro.hwp']
+
+for data in tmp:
+    point_idx = data.rfind(".")
+
+    print(data[:point_idx])
+
+# 160
+tmp = ['intra.h', 'intra.c', 'define.h', 'run.py']
+
+for data in tmp:
+    if data.split(".")[-1] in ["h","c"]:
+        print(data)
+
+# 164
+# 99부터 0까지 1씩 감소하는 숫자 출력
+
+# my ver.
+for i in range(99,-1,-1):
+    print(i)
+
+# other ver.
+for i in range(100):
+    print(99-i)
+
+# 165
+'''
+for문 결과
+
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+...
+0.9
+
+'''
+for i in range(10):
+    print( i/10. )
+
+# 170
+times=1
+for i in range(1,11):
+    times*=i
+
+print(times)
+
+# 173
+price_list = [32100, 32150, 32000, 32500]
+
+for i in range(len(price_list)):
+
+    print(f'{len(price_list)-i} {price_list[i]}')
+
+
+
+# 174
+price_list = [32100, 32150, 32000, 32500]
+
+for i in range(1, len(price_list)):
+
+    print(f'{100*i} {price_list[i]}')
+
+# 175
+my_list = ["가", "나", "다", "라"]
+
+for start_id in range(len(my_list)-1):
+    print(my_list[start_id], my_list[start_id+1])
+
+
+# 176 
+my_list = ["가", "나", "다", "라", "마"]
+
+# my ver.
+for i in range( len(my_list) - 2 ):
+    print(my_list[i], my_list[i+1], my_list[i+2])
+
+
+# other ver.
+for i in range( 1, len(my_list) - 1 ):
+    print(my_list[i-1], my_list[i], my_list[i+1])
+
+
+# 177
+my_list = ["가", "나", "다", "라"]
+
+
+for i in range(len(my_list)-1):
+    print(my_list[len(my_list)-1-i],
+          my_list[len(my_list)-2-i])
+
+
+my_list = ["가", "나", "다", "라"]
+
+
+for i in range(1, len(my_list)):
+    print(my_list[len(my_list)-i],
+          my_list[len(my_list)-1-i])
+
+
+# 178
+my_list = [100, 200, 400, 800]
+
+for i in range(1, len(my_list)):
+    print( my_list[i] - my_list[i-1] )
+
+# other ver.
+for i in range(len(my_list) - 1):
+    print(abs(my_list[i+1] - my_list[i]))
+
+# 179
+my_list = [100, 200, 400, 800, 1000, 1300]
+
+for i in range(2,len(my_list)):
+
+    tot = my_list[i-2] + my_list[i-1] + my_list[i] 
+
+    print(tot/3.)
+
+
+for i in range(1,len(my_list)-1):
+
+    tot = my_list[i-1] + my_list[i] + my_list[i+1] 
+
+    print(tot/3.)
+
+
 
 
 

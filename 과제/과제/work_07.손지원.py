@@ -198,16 +198,18 @@ for idx,m in enumerate(msg):
     msg[idx] = m.strip(" ',.")
     # msg[idx] = m.strip(string.punctuation)
 
+'''
+
 cnt=0
 for m in msg:
     if m=='the':cnt+=1
 print(cnt)
-
+'''
 
 
 # 구두점+빈칸 삭제
-import string
-clean_msg = msg..strip(string.punctuation + " ")
+# import string
+# clean_msg = msg.strip(string.punctuation + " ")
 
 '''
 입력 문단
