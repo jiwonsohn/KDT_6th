@@ -2,9 +2,9 @@
 from base import base
 
 '''
-    ### base 현황 출력 함수
+show_base 현황 출력 함수
 
-* 함수이름: showBase
+* 함수이름: show_base
 * 함수기능: 1번 공을 던진 후 승부 결과에 따른 base 갱신 상황 update
 * 매개변수: str state(홈런,안타,아웃) name(공격팀 이름) / list doru(1루2루3루 상태) / int 4개 Bat, Ball outCount, home 
             bool full_base isStrike / 
@@ -45,8 +45,8 @@ def show_base(state, doru, Bat, Ball,strike, outCount,home,full_base,name,isStri
     base(state, oneru, tworu, thrru, strike, outCount,home,full_base,name,isStrike)
 
 
-if __name__ =='__main__':       # 실행파일 이름=> __main__
+if __name__ =='__main__':       
     print("--TEST--")
 
-    # print(show_base("만루",1,1,1,))
+    # print(show_base("만루",1,1,1))
     # print(f'결과: {play_ball("삼성")}')
