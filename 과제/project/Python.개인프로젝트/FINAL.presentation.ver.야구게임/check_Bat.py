@@ -1,6 +1,6 @@
 
 '''
-check_Bat    
+check_Bat     
 
 함수기능: 사용자가 터미널에 입력한 값이 1~100 사이 자연수 여부 check
 매개변수: bat_trhow ( input()로 받은 입력값을 저장한 변수)
