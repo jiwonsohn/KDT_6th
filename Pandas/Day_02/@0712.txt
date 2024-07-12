@@ -1,0 +1,206 @@
+============================0712======================
+
+
+========================Remind=======================
+
+클래스
+
+DF 생성/저장
+DF 행/열 인덱스 전체변경, 일부변경 rename( index={ }, columns= {} )
+DF 행/열 삭제 drop()  -> 행,열 방향 선언 axis,  복사본 저장 여부 inplace
+
+특별한 매개변수 ==> inplace=False: 원본 DF 변경 여부 설정 
+
+추출
+	* 시리즈 원소 추출
+	* DF 원소, 행, 열 추출			=> 행 추출=> iloc[] / loc[]
+
+추가
+	* DF 행/열 추가
+
+변경
+	* DF 원소/행/열
+
+
+=========================EXAM======================
+====================================================
+
+[순수 프로그래밍]
+	--> 원시데이터 타입 (int float bool : Primitive)
+	--> 컬렉션데이터 타입 (list tuple dic set  : collection)
+
+
+[데이터 분석 프로그램]
+	--> 파이썬 언어를 사용한 판다스!
+
+
+
+# -----------------------------------------------------------
+# 클래스
+#       - 객체지향언어에서(OOP)에서 데이터를 정의하는 자료형
+#       - 데이터를 정의할 수 있는 데이터의 속성 & 기능 명시
+# 
+#       - 구성요소:
+#               속성(attribute/field) + 기능(method)
+# -----------------------------------------------------------
+
+
+class Bugger:
+
+    # 힙 영역에 객체 생성 시, 속성값 저장 기능
+    def __init__(self, bread, patty, veg, kind):  
+        
+        self.bread=bread
+        self.patty=patty
+        self.veg  =veg
+
+        self.kind =kind
+
+    # 클래스 기능 선언(method)
+    def printInfo(self):            # 'self'에는 객체 주소가 할당됨
+
+        print(f'브 랜 드:    {self.kind}')
+        print(f'빵 종류:    {self.bread}')
+        print(f'패   티:    {self.patty}')
+        print(f'야   채:    {self.veg}')
+
+
+
+# Bugger 객체 생성---------------------------------------------
+
+# bugger1 = Bugger()
+
+'''
+TypeError: __init__() missing 4 required positional arguments: 'bread', 'patty', 'veg', and 'kind'
+
+Bugger 클래스 내 선언한 함수 __init__ 읽음!
+'''
+
+# 불고기 버거 객체생성
+bugger1 = Bugger('브리오슈', '불고기','양상추 양파 토마토','롯데리아')
+
+bugger2 = Bugger('참깨곡물', '쇠고기패티', '치즈 양상추 양파 토마토', '맥도널드')
+
+
+
+# 버거 정보 확인
+bugger1.printInfo()
+'''
+브 랜 드:    롯데리아
+빵 종류:    브리오슈
+패   티:    불고기
+야   채:    양상추 양파 토마토
+'''
+
+bugger2.printInfo()
+'''
+브 랜 드:    맥도널드
+빵 종류:    참깨곡물
+패   티:    쇠고기패티
+야   채:    치즈 양상추 양파 토마토
+'''
+
+## 모든 Bugger 클래스에 대해 브랜드가 똑같을 때!!!!!!!!!!!
+
+
+class Bugger:
+
+    kind = "맥도널드"           # 모든 버거가 롯데리아일 때, 선언
+                              		  #  이제 kind는 클래스 속성!!!! (모든 bugger 클래스에서 공통된 속성이니까)
+
+
+
+    # 힙 영역에 객체 생성 시, 속성값 저장 기능
+    def __init__(self, bread, patty, veg):  
+        
+        self.bread=bread            # bread,patty,veg는 클래스 선언 시 마다 상이함
+        self.patty=patty           			 #       --> 인스턴스 속성!!!!
+        self.veg  =veg
+
+        # self.kind =kind
+
+
+    # 클래스 기능 선언(method)
+    def printInfo(self):            # 'self'에는 해당클래스에서 선언한 버거 인스턴스 주소가 할당됨
+
+        print(f'브 랜 드:    {self.kind}')
+        print(f'빵 종류:    {self.bread}')
+        print(f'패   티:    {self.patty}')
+        print(f'야   채:    {self.veg}')
+
+
+
+# kind 속성 선언 안함!!!!!
+bugger1 = Bugger('브리오슈', '불고기','양상추 양파 토마토')
+bugger2 = Bugger('참깨곡물', '쇠고기패티', '치즈 양상추 양파 토마토')
+
+# 버거 정보 확인
+bugger1.printInfo()
+'''
+브 랜 드:    맥도널드
+빵 종류:    브리오슈
+패   티:    불고기
+야   채:    양상추 양파 토마토
+'''
+
+bugger2.printInfo()
+'''
+브 랜 드:    맥도널드
+빵 종류:    참깨곡물
+패   티:    쇠고기패티
+야   채:    치즈 양상추 양파 토마토
+'''
+
+
+#### DataFrame----------------------------------------------------
+- 판다스에서 데이터를 저장하는 2차원 자료형
+- 구성: 2차원 데이터 (행&열)  /  Index + 열이름 + 데이터
+- 형식: pandas.DataFrame( 2D_데이터 )
+
+
+## DF 속성 읽기
+			- index, columns, values, ndim, dtypes
+
+
+- 속성으로 행 Index 변경 -> 변수명.index = 새로운 index
+
+- 속성으로 열 Index 변경 -> 변수명.columns = 새로운 columns
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
