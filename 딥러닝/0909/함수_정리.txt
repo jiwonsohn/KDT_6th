@@ -1,0 +1,65 @@
+[[ 텐서 생성]]
+- torch.tensor( [10,20] )
+
+- torch.zeros( 2,5 )
+
+- torch.ones( 2,3 )
+
+- torch.full( (3,2) )			( (2,3) ) / (2,) / (2,3) 셋 다 가능
+
+- torch.eye( (3) )				=> 무조건 2차원!!
+
+
+[[ torch.rand ]]
+
+- torch.rand(3)			# 1D 원소 3개
+
+- torch.rand(2,1,3)		# 1행 3열 2개
+
+- torch.randint( 1, 5, (3,5) )
+
+
+[[ 정수형 변환 텐서 ]]
+	<< 1byte >>
+- torch.CharTensor(data)		# 소수점 아래 버리고 정수화
+
+- torch.tensor(data, dtype=torch.int8)	# dtype 선언 방법
+
+	<< 2byte >>
+
+- torch.ShortTensor(data)
+
+- torch.tensor(data, dtype=torch.int16)
+
+[[ 논리형 변환 텐서 ]]
+- torch.BoolTensor(data)
+
+- torch.tensor(data, dtype = torhc.bool)
+
+[[ 실수형 변환 텐서 ]]
+
+- torch.DoubleTensor(data)
+
+- torch.tensor(data, dtype= torch.float64)
+
+[[ 텐서 저장/실행 위치 지정 ]]
+
+DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
+		
+		=> cuda.is_available()가 True이면 'cuda' 반환 or False이면 'cpu' 확인
+
+[[ 텐서 형변환 ]]
+
+- dataTS.type( torch.float32 )			# 바로 형변환
+
+- dataTS_2 = dataTS.float()				# 새로운 변수에 할당
+
+- dataTS_3 = dataTS.bool()
+
+- dataTS.to( dtype=torch.int8, 
+					device='cuda' if torch.cuda.is_available() else 'cpu' )
+
+
+
+
+
