@@ -1,16 +1,4 @@
 
-'''
-play_ball
-
-함수기능: 타자(사용자)가 입력한 1~100사이 자연수가 투수(컴퓨터)랜덤추출한 수에 근접할수록 홈런>안타>스트라이크 순으로
-          득점하도록 판별하는 함수
-
-매개변수: str name(공격 순서인 팀의 이름)
-
-함수결과: int home(공격팀 득점 수;        최대 {attack_break}점 득점)
-'''
-
-
 import random as rad
 import playsound
 
@@ -41,9 +29,9 @@ def play_ball(name):
         # 1명 타자 공격
         while strike!=strikeNumber:
 
-            isOut=False                   # Out 여부 check
+            isOut=False                 # Out 여부 check
 
-            # Attack_Break                # 최대 득점 수 5점 제한
+            # Attack_Break
             if home >= attack_break: 
                 print("*"*52)
                 b=f"득점이 최대점인 {attack_break}점 이상이므로 공격을 종료합니다"

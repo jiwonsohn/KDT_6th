@@ -1,14 +1,4 @@
 
-'''
-check_Bat     
-
-함수기능: 사용자가 터미널에 입력한 값이 1~100 사이 자연수 여부 check
-매개변수: bat_trhow ( input()로 받은 입력값을 저장한 변수)
-
-함수결과: int, None
-'''
-
-
 def check_Bat(bat_throw):
     
 
@@ -37,8 +27,8 @@ def check_Bat(bat_throw):
             return None
         
 
-if __name__ =='__main__':       
+if __name__ =='__main__':       # 실행파일 이름=> __main__
     print("--TEST--")
 
-    print(f'결과: {check_Bat("31")}')
+    # print(f'결과: {check_Bat("31")}')
     print(f'결과: {check_Bat("no")}')

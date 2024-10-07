@@ -1,0 +1,37 @@
+digraph Tree {
+node [shape=box, style="filled", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="spore-print-color_h <= 0.5\ngini = 0.472\nsamples = 4515\nvalue = [2790, 1725]\nclass = enable", fillcolor="#f5cfb3"] ;
+1 [label="gill-size_n <= 0.5\ngini = 0.246\nsamples = 3257\nvalue = [2790, 467]\nclass = enable", fillcolor="#e9965a"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="ring-number_o <= 0.5\ngini = 0.066\nsamples = 2697\nvalue = [2605, 92]\nclass = enable", fillcolor="#e68540"] ;
+1 -> 2 ;
+3 [label="habitat_p <= 0.5\ngini = 0.409\nsamples = 129\nvalue = [37, 92]\nclass = poison", fillcolor="#89c4ef"] ;
+2 -> 3 ;
+4 [label="cap-color_n <= 0.5\ngini = 0.115\nsamples = 98\nvalue = [6, 92]\nclass = poison", fillcolor="#46a3e7"] ;
+3 -> 4 ;
+5 [label="gini = 0.0\nsamples = 82\nvalue = [0, 82]\nclass = poison", fillcolor="#399de5"] ;
+4 -> 5 ;
+6 [label="gini = 0.469\nsamples = 16\nvalue = [6, 10]\nclass = poison", fillcolor="#b0d8f5"] ;
+4 -> 6 ;
+7 [label="gini = 0.0\nsamples = 31\nvalue = [31, 0]\nclass = enable", fillcolor="#e58139"] ;
+3 -> 7 ;
+8 [label="gini = 0.0\nsamples = 2568\nvalue = [2568, 0]\nclass = enable", fillcolor="#e58139"] ;
+2 -> 8 ;
+9 [label="odor_n <= 0.5\ngini = 0.442\nsamples = 560\nvalue = [185, 375]\nclass = poison", fillcolor="#9bcdf2"] ;
+1 -> 9 ;
+10 [label="stalk-shape_e <= 0.5\ngini = 0.279\nsamples = 435\nvalue = [73, 362]\nclass = poison", fillcolor="#61b1ea"] ;
+9 -> 10 ;
+11 [label="gini = 0.0\nsamples = 73\nvalue = [73, 0]\nclass = enable", fillcolor="#e58139"] ;
+10 -> 11 ;
+12 [label="gini = 0.0\nsamples = 362\nvalue = [0, 362]\nclass = poison", fillcolor="#399de5"] ;
+10 -> 12 ;
+13 [label="population_c <= 0.5\ngini = 0.186\nsamples = 125\nvalue = [112, 13]\nclass = enable", fillcolor="#e89050"] ;
+9 -> 13 ;
+14 [label="gini = 0.0\nsamples = 112\nvalue = [112, 0]\nclass = enable", fillcolor="#e58139"] ;
+13 -> 14 ;
+15 [label="gini = 0.0\nsamples = 13\nvalue = [0, 13]\nclass = poison", fillcolor="#399de5"] ;
+13 -> 15 ;
+16 [label="gini = 0.0\nsamples = 1258\nvalue = [0, 1258]\nclass = poison", fillcolor="#399de5"] ;
+0 -> 16 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
