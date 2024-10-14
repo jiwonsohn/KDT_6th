@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 태그</title>
+</head>
+<body>
+    <h1 id="start_h1"> 이미지 태그</h1>
+    <!-- <img>: 이미지를 브라우저 화면에 출력해주는 태그  -->
+    <!-- src 속성: 브라우저 화면에 보여줄 이미지 링크/경로 
+                  경로는 html 파일 위치 기준으로 -->
+
+    <!-- 크기로 이미지 고정 -->
+    <img src="./tmp.jpg" alt="존재하지 않는 이미지" width="300" height="200"></img><br>
+    
+    <img src="../tmp.jpg" alt="존재하지 않는 이미지"></img><br>
+
+    <!-- 비율로 이미지 고정-->
+    <img src="./tmp.jpg" alt="존재하지 않는 이미지" width="30%" height="40%"></img><br>
+
+    <!--이미지와 URL 링크-->
+    <a href="http://www.naver.com" target="_blank"> 
+        <img src='./naver.gif' style="width:400px; height:300px;"><br>
+    </a>
+
+    <!--이미지와 HTML 링크-->
+    <a href="./ex_list.html" target="_blank"> 
+            <img src='./tmp.jpg' style="width:400px; height:300px;"><br>
+    </a>
+
+    <!-- 페이지의 처음으로 이동 링크 설정 즉, 내부 페이지 이동 -->
+    <!-- href="#id 속성값" 으로 이동 -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="#start_h1" > 
+        <img src='./upper.png' style="width:200px; height:200px;" >
+    </a>
+    
+
+</body>
+</html>

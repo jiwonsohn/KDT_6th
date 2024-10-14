@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 태그</title>
+</head>
+<body>
+    <h1 align="center"> 사용자 입력 Form 태그</h1>
+
+    <hr>
+    <form align="center">
+        <h3> FORM 예시 </h3>
+        <!-- type 설명 교재 p.84 -->
+
+        텍스트 <input type="text" name="msg" value="없음"> <br>
+        <!-- passsword: 입력값 보이지 않게 처리-->
+        비밀번호 <input type="password" name="pass" value="없음"> <br>
+        전화번호 <input type="tel" name="phone"  value="없음"> <br>
+        <!-- number: 숫자만 입력받도록 처리 -->
+        숫자데이터 <input type="number" name="nums" value="0"> <br>
+        웹 URL <input type="url" name="nums" value="0"> <br>
+        이메일 <input type="email" name="nums" value="0"> <br>
+        <input type="submit" value="전송">
+
+    <!--
+    [폼에 데이터 입력 후 전송한 뒤 페이지 링크]
+        -> ex_form1.html?msg=비+오는+날+파전+막거리....&pass=없음&phone=010-2345-1234&nums=963&nums=http%3A%2F%2Fwww.naver.com&nums=kkk%40gmail.com
+    
+    
+    주소 페이지에 입력값 출력됨
+        => GET 방식으로 서버에 입력/선택된 value 전달
+        => 보안에 취약
+
+    주소 페이지 입력값 안 보임
+        => POST 방식으로 서버에 입력/선택된 value 전달
+        => 보안 굳
+    -->
+    </form>
+
+    <hr>
+    <form align="center">
+        <!--
+        ex_form1.html?python=on&mysql=on&age=30
+
+        체크박스는 name 값이 & 라디오버튼은 value 값이 서버에 전달!!
+        -->
+
+        <!-- 여러 개 체크 가능 => checkbox -->
+        <h3> checkbox 예시 </h3>
+        <strong> 프로그래밍 가능한 언어 선택 </strong> <br>
+        Python <input type="checkbox" name="python"> <br>
+        HTML <input type="checkbox" name="html"> <br>
+        MySQL <input type="checkbox" name="mysql"> <br><br>
+
+        <!-- 1개만 선택 시 => Radiobutton
+        name이 동일한 값이어야 중복 체크 방지됨
+        -->
+        <h3> radiobutton 예시 </h3>
+        <strong> 연령층 </strong> <br>
+        10대 <input type="radio" name="age" value="10"> <br>
+        20대 <input type="radio" name="age" value="20"> <br>
+        30대 <input type="radio" name="age" value="30"> <br>
+        40대 <input type="radio" name="age" value="40"> <br>
+
+        <hr>
+        <h3> 그외 예시 </h3>
+        <!-- 색상 입력 태그 -->
+        배경색: <input type="color" name="bgcolor"> <br>
+
+        <!-- 날짜 요일 입력 태그 -->
+        생년월일: <input type="date" name="birthday"> <br>
+
+        <br>
+        <hr>
+        <!--버튼 태그-->
+        저장하시겠습니까? <input type="button" name="okbtn" value="확인"> <br><br>
+
+        <input type="submit" value="전송">
+
+        <!-- 라벨태그: 교재 p86-->
+        <form> 
+            <!-- 암묵적/묵시적 방식 -->
+            <label > 
+                메세지: <input type="text" >
+            </label>
+
+
+            <!-- 명시적 방식 #1 -->
+            <label for="msg1"> 
+                메세지: <input type="text" id="msg1">
+            </label>
+
+            <!-- 명시적 방식  #2-->
+            <label for="msg2"> 메세지2: </label> 
+            <input type="text" id="msg2"> <br>
+
+            <input type="text" value="전송">
+        </form>
+
+    </form>
+</body>
+</html>
