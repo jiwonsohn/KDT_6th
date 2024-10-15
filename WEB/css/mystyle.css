@@ -1,0 +1,23 @@
+
+
+p {
+    background-color: bisque;
+}
+
+/* id 선택 & 스타일 지정 */
+#second_p {
+    background-color: aliceblue;
+    color: brown;
+    font-weight: bold;
+}
+
+/* 클래스 선택 & 스타일 지정 */
+.mon {
+    background-color: rgb(155, 212, 155);
+}
+
+body {
+    align-content: center;
+    background-image: url("../D1014/naver.gif");
+
+}

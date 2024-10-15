@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 태그</title>
+</head>
+<body>
+    <!-- 89페이지 -->
+    
+    <h3> textarea 태그 사용법 </h3>
+    <p>
+        <a href="https://www.w3schools.com/tags/tag_textarea.asp" > 태그 속성 확인 링크 </a>
+    </p>
+    <hr>
+
+    <form> 
+        <fieldset>
+            <legend>블로그 글쓰기</legend>
+            <p>
+                <label>제목</label>
+                <!-- placeholder: 입력값 입력 전 회색으로 예시 표시 속성-->
+                <!-- minlength, maxlength: 입력 최소/최대 글자 수-->
+                <!-- autofocus: 커서 위치 디폴트 설정 -->
+                <input type="text" minlength="3" maxlength="10" name="title" 
+                placeholder="하루 일기 챌린지" autofocus="True">
+            </p>
+
+            <p>
+                <label>내용</label>
+                <!-- textarea: 여러 줄 입력 가능-->
+                <textarea  name="msg" placeholder="내용을 입력하세요" rows="10" cols="50"></textarea>
+            </p>
+        </fieldset>
+        <input type="submit" value="저장">
+    </form>
+
+</body>
+</html>
