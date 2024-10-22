@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask Web</title>
+
+    <!-- 외부 CSS 파일 설정 -->
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <pre>
+
+        
+        Hey Baby~~
+        나랑 산책 한 사바리 하러 갈래~~?~?
+
+
+
+    </pre>
+    <img src="{{ url_for('static', filename='img/doggy.jpg') }}"><br>
+
+    <ul>
+        <li style="list-style-type: none;"><a href="/info"> INFO </a></li>
+    </ul>
+</body>
+</html>
