@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    #msg {
+        color: red;
+    }
+</head>
+<body>
+    <h1>질문게시판</h1>
+
+    <!-- 
+    기존 html에서 고정된 갯수의 ul/ol 가 아니라, 사용자가 질문(ul/ol)을 추가함에 따라 동적으로 갯수가 변해야 함
+    => 반복문으로 DB에서 로드!
+    -->
+    <h3>Table Ver.</h3>
+    <table border="1">
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>내용</th>
+            <th>날짜</th>
+
+        </tr>
+
+        {% if question_list %}
+        
+            {% for question in question_list %}
+            <tr>
+                <!-- 질문의 제목만 출력 -->
+                <td>{{question.id}}</td>
+                <td><a href="/qdetail/{{question.id}}">{{question.subject}}</a></td>
+                <td>{{question.create_date}}</td>
+            </tr>
+            {% endfor %}
+
+        {% else %}
+            <tr>
+                <td class="msg" colspan="3">등록된 질문이 없습니다.</td>
+            </tr>
+        {% endif %}
+    </table>
+
+    <br><br><hr>
+
+    <h3>List Ver.</h3>
+    {% if question_list %}
+    <ol>
+        {% for question in question_list %}
+            <li>{{question.id}}</li>
+            <li><a href="/qdetail/{{question.id}}">{{question.subject}}</a></li>
+            <li>{{question.content}}}}</li>
+        {% endfor %}
+    </ol>
+    {% else %}
+        <p class="msg">등록된 질문이 없습니다.</p>
+    {% endif %}
+</body>
+</html>
